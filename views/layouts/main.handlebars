@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>MVC Tech Blog</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='/public/style.css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
    
 </head>
 <body>
@@ -13,12 +13,12 @@
     <header>
         <div>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Dashboard</a>
-                {{#if logged_in}}
-                <a href="#">Logout</a>
+                <a href="/">Home</a>
+                <a href="/dashboard">Dashboard</a>
+                {{#if loggedIn}}
+                <a id="logout" href="#">Logout</a>
                 {{else}}
-                 <a href="">Login</a>
+                 <a href="/login">Login</a>
                  {{/if}}
             </nav>
       </div>
@@ -29,8 +29,8 @@
 
  </div>
     
-      {{#if logged_in}}
-  <script src="/js/logout.js"></script>
+      {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
   {{/if}}
 
 </body>
